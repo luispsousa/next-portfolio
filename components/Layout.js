@@ -11,14 +11,10 @@ Router.onRouteChangeStart = (url) => {
 Router.onRouteChangeComplete = () => nprogress.done();
 Router.onRouteChangeError = () => nprogress.done();
 
-export default ({ children, title }) => (
+const Layout = ({ children, title }) => (
   <div className='root'>
     <Head>
       <title>NextPortfolio</title>
-      <link
-        rel='stylesheet'
-        href='https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css'
-      />
     </Head>
     <header>
       <Link href='/'>
@@ -67,8 +63,10 @@ export default ({ children, title }) => (
       body {
         margin: 0;
         font-size: 110%;
-        backround: #f0f0f0;
+        background: #f0f0f0;
       }
     `}</style>
   </div>
 );
+
+export default Layout;
